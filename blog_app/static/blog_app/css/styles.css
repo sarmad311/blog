@@ -29,12 +29,12 @@ header {
     }
 
     #search-input {
-        width: 80%;  /* Make the search input take up 80% of the available width */
+        width: 20%;  /* Make the search input take up 80% of the available width */
         margin-right: 10px;
     }
 
     #search-button {
-        width: 15%;  /* Button will take 15% of the available width */
+        width: 5%;  /* Button will take 15% of the available width */
         padding: 5px;
     }
 }
@@ -45,7 +45,7 @@ header {
         display: flex;  /* Show the navigation links */
     }
 
-    #search-form {
+    .navbar-nav {
         display: none;  /* Hide the search bar when width is >= 1000px */
     }
 }
