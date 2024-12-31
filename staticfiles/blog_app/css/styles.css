@@ -1,7 +1,7 @@
 /* General styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
+    background: linear-gradient(135deg, #2a9d8f, #264653);
     margin: 0;
     padding: 0;
     transition: all 0.3s ease-in-out; /* Smooth transition for background change */
@@ -137,7 +137,6 @@ html {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: linear-gradient(135deg, #2a9d8f, #264653);
     color: #f4a261;
     text-align: center;
     padding: 0 20px;
