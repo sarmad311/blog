@@ -1,9 +1,10 @@
 /* General styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f1f8f7;  /* Soft teal background */
+    background-color: #f8f9fa;
     margin: 0;
     padding: 0;
+    transition: all 0.3s ease-in-out; /* Smooth transition for background change */
 }
 
 /* Header styles */
@@ -13,10 +14,34 @@ header {
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px 0;
-    background-color: #ffffff;  /* White background */
+    background-color: #2a2b2d; /* Darker background for elegance */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition */
 }
 
-/* Hide navigation links when width < 1000px */
+/* Color scheme */
+.bg-custom {
+    background-color: #4e5b6e; /* Muted navy blue */
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #f8f9fa !important;
+    transition: color 0.3s ease-in-out; /* Smooth color change on hover */
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #ff8c42 !important; /* Peachy orange on hover */
+}
+
+.navbar-brand img {
+    max-width: 120px;
+    transition: transform 0.3s ease; /* Logo hover animation */
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.1); /* Scale logo when hovered */
+}
+
+/* Navigation links (hidden when width < 1000px) */
 @media (max-width: 1000px) {
     .navbar-nav {
         display: none;  /* Hide all navigation links */
@@ -46,6 +71,56 @@ header {
     }
 
     #search-form {
-        display: none;  /* Hide the search bar when width is >= 1000px */
+        display: block;  /* Make the search bar visible when width is >= 1000px */
     }
+}
+
+/* Custom search bar styles */
+#search-input {
+    background-color: #4e5b6e; /* Darker background */
+    color: #f8f9fa; /* Light text for input */
+    border: 1px solid #ff8c42; /* Peachy orange border */
+    border-radius: 20px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out; /* Smooth input effect */
+}
+
+#search-input:focus {
+    background-color: #f8f9fa; /* Light background on focus */
+    border-color: #4e5b6e; /* Border color changes on focus */
+    color: #4e5b6e; /* Dark text color on focus */
+}
+
+/* Button hover effect */
+#search-button {
+    background-color: #ff8c42; /* Peachy orange */
+    color: white;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Button hover animation */
+}
+
+#search-button:hover {
+    background-color: #f8f9fa; /* Light background on hover */
+    color: #4e5b6e; /* Dark color on hover */
+    transform: scale(1.05); /* Button hover scale */
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom animations for elements */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.navbar-nav a {
+    animation: fadeIn 1s ease-in-out; /* Adding fade-in effect to nav links */
+}
+
+/* Box shadows for hover effects */
+.nav-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Hover shadow effect for nav links */
 }
