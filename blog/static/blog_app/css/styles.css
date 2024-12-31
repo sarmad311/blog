@@ -1,7 +1,7 @@
 /* General styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f1f5f9;  /* Light cream background */
+    background-color: #1f68b1;
     margin: 0;
     padding: 0;
 }
@@ -13,16 +13,7 @@ header {
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px 0;
-    background-color: #2c3e50;  /* Soft dark blue for the header */
-}
-
-/* Navbar styles */
-.navbar-nav .nav-link {
-    color: #1abc9c;  /* Smooth teal for navbar links */
-}
-
-.navbar-nav .nav-link:hover {
-    color: #16a085;  /* Slightly darker teal on hover */
+    background-color: #fff;
 }
 
 /* Hide navigation links when width < 1000px */
@@ -40,21 +31,11 @@ header {
     #search-input {
         width: 80%;  /* Make the search input take up 80% of the available width */
         margin-right: 10px;
-        background-color: #ecf0f1;  /* Light pastel gray input */
-        border: 1px solid #bdc3c7;
-        padding: 8px;
     }
 
     #search-button {
         width: 15%;  /* Button will take 15% of the available width */
         padding: 5px;
-        background-color: #f39c12;  /* Bright orange search button */
-        color: white;
-        border: none;
-    }
-
-    #search-button:hover {
-        background-color: #e67e22;  /* Darker orange on hover */
     }
 }
 
