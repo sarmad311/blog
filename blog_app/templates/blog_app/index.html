@@ -1,7 +1,8 @@
 {% extends 'blog_app/layout.html' %}
+{% load static %}
 
 {% block content %}
     <div class="container my-5">
-        <img class="d-block mx-auto" src="logo_image.png" alt="logo_image">
+        <img class="d-block mx-auto" src="{% static 'images/logo_image.png' %}" alt="logo_image">
     </div>
 {% endblock %}
