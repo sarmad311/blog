@@ -124,3 +124,64 @@ html {
 .nav-item:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Hover shadow effect for nav links */
 }
+
+.logo_image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #2a9d8f, #264653);
+    color: #f4a261;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.main-title {
+    font-family: 'Georgia', serif;
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    animation: fade-in 1.5s ease-in-out;
+}
+
+.sub-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin: 10px 0 0;
+    color: #e9c46a;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    animation: slide-up 1.5s ease-in-out;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
