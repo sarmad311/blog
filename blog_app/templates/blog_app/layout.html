@@ -20,11 +20,11 @@
         <div class="container">
             <!-- Logo on the left -->
             <a class="navbar-brand" href="#">
-                <img src="{% static 'my_app/images/logo.png' %}" alt="Logo" class="logo">
+                <label class="logo">Tasveer</label>
             </a>
 
             <!-- Navigation links (hidden when width < 1000px) -->
-            <div class="navbar-nav mx-auto d-none d-lg-flex">
+            <div class="navbar-nav mx-auto">
                 <a class="nav-item nav-link" href="#">Home</a>
                 <a class="nav-item nav-link" href="#">About</a>
                 <a class="nav-item nav-link" href="#">Services</a>
@@ -40,6 +40,13 @@
     {% block content %}
     {% endblock %}
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Tasveer. All rights reserved.</p>
+        </div>
+    </footer>
+
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
@@ -49,3 +56,13 @@
     <script src="{% static 'my_app/js/script.js' %}"></script>
 </body>
 </html>
+index.html:
+{% extends 'blog_app/layout.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="title-container">
+        <h1 class="main-title">Tasveer</h1>
+        <h2 class="sub-title">Creatives</h2>
+    </div>
+{% endblock %}

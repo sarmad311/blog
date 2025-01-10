@@ -122,7 +122,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static",  # If you keep your static files in a folder named 'static' at the project root
+    BASE_DIR / 'blog_app/static',  # Adjust based on your directory structure
 ]
 
 STATIC_ROOT = BASE_DIR / "staticfiles"
