@@ -1,9 +1,10 @@
 /* General styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #2a9d8f, #264653);
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1d3557, #457b9d);
     margin: 0;
     padding: 0;
+    color: #f1faee;
     transition: all 0.3s ease-in-out; /* Smooth transition for background change */
 }
 
@@ -12,24 +13,29 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px 0;
-    background-color: #2a2b2d; /* Darker background for elegance */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 15px 0;
+    background-color: #1d3557; /* Subtle, deep blue */
     transition: background-color 0.3s ease-in-out; /* Smooth transition */
 }
 
-/* Color scheme */
+/* Custom background for header */
 .bg-custom {
-    background-color: #4e5b6e; /* Muted navy blue */
+    background-color: #457b9d; /* Calming blue */
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: #f8f9fa !important;
-    transition: color 0.3s ease-in-out; /* Smooth color change on hover */
+    color: #f1faee !important;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out; /* Smooth color change on hover */
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-    color: #ff8c42 !important; /* Peachy orange on hover */
+    color: #1d3557 !important; /* Dark text on hover */
+    background-color: #f1faee; /* Light background on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-brand img {
@@ -41,126 +47,50 @@ header {
     transform: scale(1.1); /* Scale logo when hovered */
 }
 
-/* Navigation links (hidden when width < 1000px) */
+/* Responsive navigation styles */
 @media (max-width: 1000px) {
     .navbar-nav {
-        display: none;  /* Hide all navigation links */
-    }
-
-    /* Make the search bar and button resize dynamically */
-    #search-form {
-        width: 100%;
-        justify-content: center;
-    }
-
-    #search-input {
-        width: 80%;  /* Make the search input take up 80% of the available width */
-        margin-right: 10px;
-    }
-
-    #search-button {
-        width: 15%;  /* Button will take 15% of the available width */
-        padding: 5px;
+        display: none; /* Hide all navigation links */
     }
 }
 
-/* Display navigation links when width >= 1000px */
 @media (min-width: 1000px) {
     .navbar-nav {
-        display: flex;  /* Show the navigation links */
-    }
-
-    #search-form {
-        display: block;  /* Make the search bar visible when width is >= 1000px */
+        display: flex; /* Show the navigation links */
     }
 }
 
-/* Custom search bar styles */
-#search-input {
-    background-color: #4e5b6e; /* Darker background */
-    color: #f8f9fa; /* Light text for input */
-    border: 1px solid #ff8c42; /* Peachy orange border */
-    border-radius: 20px;
-    padding: 10px 15px;
-    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out; /* Smooth input effect */
-}
-
-#search-input:focus {
-    background-color: #f8f9fa; /* Light background on focus */
-    border-color: #4e5b6e; /* Border color changes on focus */
-    color: #4e5b6e; /* Dark text color on focus */
-}
-
-/* Button hover effect */
-#search-button {
-    background-color: #ff8c42; /* Peachy orange */
-    color: white;
-    border-radius: 20px;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Button hover animation */
-}
-
-#search-button:hover {
-    background-color: #f8f9fa; /* Light background on hover */
-    color: #4e5b6e; /* Dark color on hover */
-    transform: scale(1.05); /* Button hover scale */
-}
-
-/* Smooth scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Custom animations for elements */
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-.navbar-nav a {
-    animation: fadeIn 1s ease-in-out; /* Adding fade-in effect to nav links */
-}
-
-/* Box shadows for hover effects */
-.nav-item:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Hover shadow effect for nav links */
-}
-
-.logo_image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
+/* Title container styles */
 .title-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: linear-gradient(135deg, #2a9d8f, #264653);
+    background: linear-gradient(135deg, #1d3557, #457b9d);
     color: #f4a261;
     text-align: center;
-    padding: 0 20px;
+    padding: 20px;
 }
 
 .main-title {
-    font-family: 'Georgia', serif;
+    font-family: 'Merriweather', serif;
     font-size: 4rem;
     font-weight: bold;
     letter-spacing: 2px;
     margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
     animation: fade-in 1.5s ease-in-out;
 }
 
 .sub-title {
-    font-family: 'Arial', sans-serif;
-    font-size: 1.8rem;
-    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
     letter-spacing: 1px;
-    margin: 10px 0 0;
-    color: #e9c46a;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    margin-top: 20px;
+    color: #f1faee;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
     animation: slide-up 1.5s ease-in-out;
 }
 
@@ -186,6 +116,12 @@ html {
     }
 }
 
-h2.sub-title {
-    margin-bottom: 300px;
+/* Footer styles */
+footer {
+    background-color: #1d3557;
+    color: #f1faee;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
 }
