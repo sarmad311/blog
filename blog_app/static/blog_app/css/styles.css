@@ -147,3 +147,7 @@ footer {
         display: flex;
     }
 }
+
+p {
+    font-size: x-large;
+}
