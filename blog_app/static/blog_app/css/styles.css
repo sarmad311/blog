@@ -286,3 +286,7 @@ form select:focus {
         font-size: 1rem;
     }
 }
+
+label {
+    color: black;
+}
