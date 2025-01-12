@@ -201,28 +201,88 @@ p {
     font-size: 1.5rem;
 }
 
-.create-service-page h2 {
-    font-family: 'Arial', sans-serif;
-    font-weight: 600;
-    color: #f8f9fa;
+.create-service-page {
+    padding-top: 50px;
 }
 
 .create-service-card {
     background: #ffffff;
-    padding: 20px;
+    padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
 }
 
+.create-service-card:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.create-service-page h2 {
+    font-family: 'Arial', sans-serif;
+    font-weight: 600;
+    color: #f1faee;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Form Input Styles */
+form input,
+form textarea,
+form select,
+form button {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    color: #343a40;
+    background-color: #f8f9fa;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+    outline: none;
+    border-color: #457b9d;
+    box-shadow: 0 0 5px rgba(69, 123, 157, 0.5);
+}
+
+/* Button Styling */
 .create-service-page .btn {
     font-weight: bold;
     text-transform: uppercase;
-    width: 100%;
     background-color: #28a745;
     border: none;
     color: #fff;
+    padding: 15px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .create-service-page .btn:hover {
     background-color: #218838;
+}
+
+/* Card Body */
+.create-service-card .card-body {
+    padding: 0;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .create-service-card {
+        padding: 20px;
+    }
+
+    .create-service-page h2 {
+        font-size: 1.5rem;
+    }
+
+    form input,
+    form textarea,
+    form select,
+    form button {
+        font-size: 1rem;
+    }
 }
