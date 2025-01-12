@@ -1,7 +1,6 @@
 from django.shortcuts import render
 
 from .models import Blog, Service
-from .forms import ServiceForm
 
 from django.shortcuts import redirect
 
