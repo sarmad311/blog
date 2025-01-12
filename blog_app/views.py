@@ -30,13 +30,17 @@ def blog_create(request):
 # View to create a new service
 def create_service(request):
     if request.method == 'POST':
-        form = ServiceForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            return redirect('all_services')
-    else:
-        form = ServiceForm()
-    return render(request, 'blog_app/create_service.html', {'form': form})
+        title = request.POST.get('title')
+        description = request.POST.get('description')
+        image = request.FILES.get('image')
+
+        # Create the Service object directly
+        Service.objects.create(title=title, description=description, image=image)
+
+        return redirect('all_services')  # Redirect to the service list after creation
+
+    return render(request, 'blog_app/create_service.html')
+
 
 # View to display all services
 def all_services(request):
