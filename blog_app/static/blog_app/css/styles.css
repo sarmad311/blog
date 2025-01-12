@@ -4,6 +4,10 @@ body {
     margin: 0;
     padding: 0;
     color: #f1faee;
+    background-size: cover; /* Ensures the background covers the entire area */
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-position: center; /* Centers the background */
     transition: all 0.3s ease-in-out; /* Smooth transition for background change */
 }
 
@@ -150,4 +154,75 @@ footer {
 
 p {
     font-size: x-large;
+}
+
+.glow-text {
+    color: #f1faee; /* Base color of the text */
+    text-shadow: 0 0 5px #f1faee, 0 0 10px #f4a261, 0 0 20px #e63946;
+}
+
+.services-page h2 {
+    font-family: 'Arial', sans-serif;
+    font-weight: 600;
+    color: #f8f9fa;
+}
+
+.service-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.service-card .card-body {
+    background: #fff;
+    border-radius: 0 0 10px 10px;
+    color: #343a40;
+    text-align: center;
+}
+
+.service-card .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.service-card .card-text {
+    color: #6c757d;
+}
+
+.no-services {
+    color: #f8f9fa;
+    font-size: 1.5rem;
+}
+
+.create-service-page h2 {
+    font-family: 'Arial', sans-serif;
+    font-weight: 600;
+    color: #f8f9fa;
+}
+
+.create-service-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.create-service-page .btn {
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100%;
+    background-color: #28a745;
+    border: none;
+    color: #fff;
+}
+
+.create-service-page .btn:hover {
+    background-color: #218838;
 }

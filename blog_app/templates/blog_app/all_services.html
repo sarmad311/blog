@@ -1,0 +1,22 @@
+{% extends 'blog_app/layout.html' %}
+{% load static %}
+{% block content %}
+<div class="container mt-5 services-page">
+    <h2 class="text-center mb-4">Our Services</h2>
+    <div class="row">
+        {% for service in services %}
+        <div class="col-md-4 mb-4">
+            <div class="card service-card">
+                <img src="{{ service.image.url }}" class="card-img-top" alt="{{ service.title }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ service.title }}</h5>
+                    <p class="card-text">{{ service.description }}</p>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+            <h2 class="text-center no-services">No services yet!</h2>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
