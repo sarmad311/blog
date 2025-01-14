@@ -377,6 +377,7 @@ h1, h2 {
 .card {
     background: #f8f9fa;
     border: none;
+    margin-bottom: 30px;
 }
 
 .list-group-item {
