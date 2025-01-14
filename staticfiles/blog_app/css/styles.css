@@ -368,3 +368,64 @@ a.btn-primary:hover {
         padding: 8px 15px;
     }
 }
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    background: #f8f9fa;
+    border: none;
+    margin-bottom: 30px;
+}
+
+.list-group-item {
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    color: #343a40;
+}
+
+.list-group-item::before {
+    content: "•";
+    color: #1d3557;
+    font-weight: bold;
+    display: inline-block;
+    width: 1rem;
+    margin-right: 0.5rem;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #6c757d;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    color: #1d3557;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    background: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #343a40;
+}
+
+a {
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #457b9d;
+}

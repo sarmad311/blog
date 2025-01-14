@@ -401,3 +401,31 @@ p {
     line-height: 1.6;
     color: #6c757d;
 }
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    color: #1d3557;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    background: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #343a40;
+}
+
+a {
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #457b9d;
+}

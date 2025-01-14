@@ -26,7 +26,6 @@ def blog_create(request):
 
     return render(request, 'blog_app/blog_create.html')
 
-# View to create a new service
 def create_service(request):
     if request.method == 'POST':
         title = request.POST.get('title')
@@ -40,11 +39,12 @@ def create_service(request):
 
     return render(request, 'blog_app/create_service.html')
 
-
-# View to display all services
 def all_services(request):
     services = Service.objects.all()
     return render(request, 'blog_app/all_services.html', {'services': services})
 
 def about(request):
     return render(request, 'blog_app/about.html')
+
+def contact(request):
+    return render(request, 'blog_app/contact.html')
