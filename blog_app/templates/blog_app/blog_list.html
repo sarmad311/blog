@@ -9,8 +9,8 @@
     {% for blog in blogs %}
     <div class="blog-post mb-4 p-4 bg-dark text-light rounded">
         <img src="{{ blog.image.url }}" alt="Blog Image" class="img-fluid rounded">
-        <h2 style="padding: 40px;" class="text-center text-light glow-text">{{ blog.title }}</h2>
-        <p class="text-light text-center">{{ blog.content }}</p>
+        <h2 style="padding: 40px;" class="text-center text-light">{{ blog.title }}</h2>
+        <p class="text-light text-center" style="font-size: 2rem;">{{ blog.content }}</p>
         <p class="text-muted"><strong>Comments:</strong> {{ blog.comments }}</p>
         <p class="text-muted"><em>Posted on {{ blog.created_at }}</em></p>
     </div>

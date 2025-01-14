@@ -151,11 +151,6 @@ p {
     font-size: x-large;
 }
 
-.glow-text {
-    color: #f1faee; /* Base color of the text */
-    text-shadow: 0 0 5px #f1faee, 0 0 10px #f4a261, 0 0 20px #e63946;
-}
-
 .services-page h2 {
     padding-bottom: 50px;
     font-weight: 600;
@@ -348,7 +343,7 @@ a.btn-primary:hover {
 
 /* Empty State Message */
 .text-light {
-    font-size: 1.4rem;
+    font-size: 2.7rem;
     text-align: center;
     margin-top: 40px;
 }
