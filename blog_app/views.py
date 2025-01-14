@@ -45,3 +45,6 @@ def create_service(request):
 def all_services(request):
     services = Service.objects.all()
     return render(request, 'blog_app/all_services.html', {'services': services})
+
+def about(request):
+    return render(request, 'blog_app/about.html')
