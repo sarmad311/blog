@@ -2,12 +2,14 @@
 {% load static %}
 
 {% block content %}
-    <h2 class="text-center">Login</h2>
-    <div class="container">
-        <form method="post" class="form-container">
+<div class="auth-page">
+    <h2 class="auth-title text-center">Login</h2>
+    <div class="auth-container">
+        <form method="post" class="auth-form">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit" class="btn btn-outline-success">Login</button>
+            <button type="submit" class="btn auth-btn">Login</button>
         </form>
     </div>
+</div>
 {% endblock %}
