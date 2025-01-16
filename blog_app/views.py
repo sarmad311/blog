@@ -4,12 +4,16 @@ from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import user_passes_test
 
 from .models import Blog, Service
 
 from django.shortcuts import redirect
 
-# Create your views here.
+def admin_check(user):
+    return user.is_superuser
+
+
 def index(request):
     return render(request, "blog_app/index.html")
 
@@ -18,6 +22,7 @@ def blog_list(request):
     blogs = Blog.objects.all().order_by('-created_at')
     return render(request, 'blog_app/blog_list.html', {'blogs': blogs})
 
+@login_required
 def blog_create(request):
     if request.method == 'POST':
         title = request.POST['title']
@@ -31,6 +36,7 @@ def blog_create(request):
 
     return render(request, 'blog_app/blog_create.html')
 
+@user_passes_test(admin_check)
 def create_service(request):
     if request.method == 'POST':
         title = request.POST.get('title')
