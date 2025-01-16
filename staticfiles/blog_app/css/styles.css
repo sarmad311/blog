@@ -249,3 +249,121 @@ h1, h2, h3, p {
     background: #c0392b;
     transform: scale(1.1);
 }
+
+/* General Styles for Auth Pages */
+.auth-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e272e, #2c3e50);
+    color: white;
+}
+
+.auth-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #f39c12;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.auth-container {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 30px 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 90%; /* Use percentage for responsiveness */
+    text-align: center;
+    margin: auto; /* Center the container horizontally */
+}
+
+@media (max-width: 768px) {
+    .auth-container {
+        max-width: 90%; /* Adjust width for smaller screens */
+        padding: 20px;
+    }
+
+    .auth-title {
+        font-size: 1.8rem; /* Reduce title size */
+    }
+
+    .auth-btn {
+        font-size: 1rem; /* Adjust button size */
+        padding: 10px 15px;
+    }
+}
+
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.auth-form input[type="text"],
+.auth-form input[type="email"],
+.auth-form input[type="password"],
+.auth-form select,
+.auth-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-form input:focus,
+.auth-form select:focus,
+.auth-form textarea:focus {
+    border: 1px solid #f39c12;
+    box-shadow: 0 0 8px rgba(243, 156, 18, 0.5);
+    outline: none;
+}
+
+.auth-btn {
+    background: #f39c12;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 15px rgba(243, 156, 18, 0.5);
+}
+
+.auth-btn:hover {
+    background: #d35400;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(211, 84, 0, 0.7);
+}
+
+.auth-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 10px rgba(243, 156, 18, 0.4);
+}
+
+.auth-container a {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    display: block;
+}
+
+.auth-container a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+label {
+    color: black;
+}

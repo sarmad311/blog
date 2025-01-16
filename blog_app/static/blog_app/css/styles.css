@@ -276,9 +276,27 @@ h1, h2, h3, p {
     padding: 30px 40px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     max-width: 400px;
-    width: 100%;
+    width: 90%; /* Use percentage for responsiveness */
     text-align: center;
+    margin: auto; /* Center the container horizontally */
 }
+
+@media (max-width: 768px) {
+    .auth-container {
+        max-width: 90%; /* Adjust width for smaller screens */
+        padding: 20px;
+    }
+
+    .auth-title {
+        font-size: 1.8rem; /* Reduce title size */
+    }
+
+    .auth-btn {
+        font-size: 1rem; /* Adjust button size */
+        padding: 10px 15px;
+    }
+}
+
 
 .auth-form {
     display: flex;
@@ -344,4 +362,8 @@ h1, h2, h3, p {
 .auth-container a:hover {
     color: #2980b9;
     text-decoration: underline;
+}
+
+label {
+    color: black;
 }
