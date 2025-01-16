@@ -429,3 +429,8 @@ a {
 a:hover {
     color: #457b9d;
 }
+
+.btn-outline-success {
+    color: #000000;
+    border-color: #000000;
+}

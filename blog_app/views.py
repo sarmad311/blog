@@ -1,4 +1,9 @@
 from django.shortcuts import render
+from django.contrib import messages
+
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth import login, logout
+from django.contrib.auth.decorators import login_required
 
 from .models import Blog, Service
 
@@ -48,3 +53,37 @@ def about(request):
 
 def contact(request):
     return render(request, 'blog_app/contact.html')
+
+# User Registration View
+def register(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            messages.success(request, f"Account created successfully for {user.username}!")
+            login(request, user)
+            return redirect('index')  # Redirect to the homepage or another page
+    else:
+        form = UserCreationForm()
+    return render(request, 'blog_app/register.html', {'form': form})
+
+# User Login View
+def user_login(request):
+    if request.method == 'POST':
+        form = AuthenticationForm(data=request.POST)
+        if form.is_valid():
+            user = form.get_user()
+            login(request, user)
+            messages.success(request, f"Welcome back, {user.username}!")
+            return redirect('index')  # Redirect to the homepage or another page
+        else:
+            messages.error(request, "Invalid username or password.")
+    else:
+        form = AuthenticationForm()
+    return render(request, 'blog_app/login.html', {'form': form})
+
+# User Logout View
+def user_logout(request):
+    logout(request)
+    messages.success(request, "You have successfully logged out.")
+    return redirect('index')
