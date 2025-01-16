@@ -2,8 +2,37 @@
 {% load static %}
 
 {% block content %}
-    <div class="title-container">
-        <h1 class="main-title">Tasveer</h1>
-        <h2 class="sub-title">Creatives</h2>
+    <!-- Title Container -->
+    <div class="title-container text-center">
+        <h1 class="main-title">Tasveer Creatives</h1>
+    </div>
+
+    <!-- Welcome Banner -->
+    <div class="welcome-banner">
+        <div class="banner-content">
+            <h1 class="animate-text">Discover Engaging Services Tailored for You</h1>
+            <p>Your journey to creativity and innovation starts here.</p>
+            <a href="#featured-sections" class="btn large-btn">Get Started</a>
+        </div>
+    </div>
+
+    <!-- Featured Sections -->
+    <div id="featured-sections" class="featured-sections">
+        <div class="card">
+            <h3>Our Services</h3>
+            <p>Discover how we can elevate your brand.</p>
+            <a href="/services" class="btn">Learn More</a>
+        </div>
+    </div>
+
+    <!-- About Snapshot -->
+    <div class="about-snapshot text-center">
+        <h2>About Us</h2>
+        <p>Our mission is to provide creative solutions that empower your digital journey.</p>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="call-to-action text-center">
+        <a href="{% url 'contact' %}" class="btn highlight-btn">Contact Us</a>
     </div>
 {% endblock %}

@@ -32,8 +32,7 @@
                     <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'all_services' %}">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'create_service' %}">create-Service</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'blog_list' %}">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'create_service' %}">Create-Service</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
                     {% if user.is_authenticated %}
                         <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
