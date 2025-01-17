@@ -273,6 +273,14 @@ h1, h2, h3, p {
     top: 100px;
 }
 
+#auth-title-register {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #f39c12;
+    text-transform: uppercase;
+}
+
 .auth-container {
     background: #ffffff;
     border-radius: 15px;
@@ -369,4 +377,10 @@ h1, h2, h3, p {
 
 label {
     color: black;
+}
+
+.line-break {
+    height: 1px;
+    color: black;
+    width: 100%;
 }
