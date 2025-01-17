@@ -3,13 +3,16 @@
 
 {% block content %}
 <div class="auth-page">
-    <h2 class="auth-title text-center">Register</h2>
     <div class="auth-container">
+        <h2 class="auth-title">Register</h2>
         <form method="post" class="auth-form">
             {% csrf_token %}
-            {{ form.as_p }}
+            <div class="form-group">
+                {{ form.as_p }}
+            </div>
             <button type="submit" class="btn auth-btn">Register</button>
         </form>
+        <a href="#" class="auth-link">Already have an account? Login</a>
     </div>
 </div>
 {% endblock %}

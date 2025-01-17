@@ -83,12 +83,12 @@ h1, h2, h3, p {
 }
 
 .card {
-    background: #fff;
     border-radius: 20px;
     padding: 25px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 90px;
 }
 
 .card:hover {
@@ -132,6 +132,7 @@ h1, h2, h3, p {
 .about-snapshot p {
     font-size: 1.3rem;
     color: #7f8c8d;
+    margin-top: 40px;
 }
 
 /* Call to Action */
@@ -296,7 +297,6 @@ h1, h2, h3, p {
         padding: 10px 15px;
     }
 }
-
 
 .auth-form {
     display: flex;
