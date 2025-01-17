@@ -1,12 +1,13 @@
 from django.shortcuts import render
 from django.contrib import messages
 
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.decorators import user_passes_test
 
 from .models import Service
+from .forms import CustomUserCreationForm
 
 from django.shortcuts import redirect
 
@@ -44,14 +45,14 @@ def contact(request):
 # User Registration View
 def register(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = CustomUserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
             messages.success(request, f"Account created successfully for {user.username}!")
             login(request, user)
             return redirect('index')  # Redirect to the homepage or another page
     else:
-        form = UserCreationForm()
+        form = CustomUserCreationForm()
     return render(request, 'blog_app/register.html', {'form': form})
 
 # User Login View
