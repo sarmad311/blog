@@ -273,14 +273,6 @@ h1, h2, h3, p {
     top: 100px;
 }
 
-#auth-title-register {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #f39c12;
-    text-transform: uppercase;
-}
-
 .auth-container {
     background: #ffffff;
     border-radius: 15px;
@@ -290,7 +282,7 @@ h1, h2, h3, p {
     width: 90%;
     height: 600px;
     text-align: center;
-    margin: auto;
+    margin: 100px;
 }
 
 @media (max-width: 768px) {
