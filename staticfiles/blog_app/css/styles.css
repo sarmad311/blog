@@ -5,6 +5,7 @@ body {
     padding: 0;
     background: #f4f4f4;
     color: #444;
+    cursor: url('cursor.png'), auto;
 }
 
 h1, h2, h3, p {
