@@ -402,3 +402,14 @@ label {
 .text-margin {
     margin-bottom: 10px;
 }
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-collapse {
+        display: -ms-flexbox !important;
+        display: flex !important
+;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+        margin-left: 550px;
+    }
+}
